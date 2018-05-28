@@ -7,6 +7,7 @@ files=(\
     bashrc \
     gemrc \
     zshrc \
+    powerline-shell.json \
 )
 
 new_path() {
