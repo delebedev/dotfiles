@@ -21,4 +21,6 @@ if ! which brew &> /dev/null; then
 fi
 
 echo "Installing dependencies from Brewfile..."
+brew tap caskroom/fonts
 brew bundle --file="$DOTFILES/macos/Brewfile"
+brew bundle --file="$DOTFILES/macos/Brewfile.cask"
