@@ -6,9 +6,12 @@ files=(\
     bash_profile \
     bashrc \
     gemrc \
+    gitattributes \
+    gitconfig \
+    gitignore \
+    powerline-shell.json \
     vimrc \
     zshrc \
-    powerline-shell.json \
 )
 
 new_path() {
