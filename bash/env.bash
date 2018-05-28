@@ -10,3 +10,8 @@ fi
 #  - /bin
 #  - /sbin
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin"
+
+# System had en_GB by default and caused obscure failures
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LANGUAGE=en_US.UTF-8
