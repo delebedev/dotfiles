@@ -5,6 +5,7 @@
 files=(\
     bash_profile \
     bashrc \
+    gemrc \
     zshrc \
 )
 
