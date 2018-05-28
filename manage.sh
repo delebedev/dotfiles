@@ -6,6 +6,7 @@ files=(\
     bash_profile \
     bashrc \
     gemrc \
+    vimrc \
     zshrc \
     powerline-shell.json \
 )
