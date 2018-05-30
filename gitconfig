@@ -11,7 +11,7 @@
   indentHeuristic = true
   colorMoved = zebra
 [push]
-  default = upstream
+  default = current
 [credential]
   helper = osxkeychain
 [alias]
