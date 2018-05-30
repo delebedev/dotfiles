@@ -9,6 +9,7 @@ files=(\
     gitattributes \
     gitconfig \
     gitignore \
+    lldbinit \
     powerline-shell.json \
     vimrc \
     zshrc \
