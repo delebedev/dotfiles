@@ -11,4 +11,4 @@ alias gst='git status -sb'
 
 # TransferWise fork-PR workflows
 alias gpr='gp && git pull-request -o'
-alias gsync='gf & gf upstream --prune && git merge upstream/dev && gp'
+alias gsync='gf && gf upstream --prune && git merge upstream/dev && gp'
