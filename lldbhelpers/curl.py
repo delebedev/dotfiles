@@ -10,7 +10,7 @@ func $process(_ request: URLRequest) {
         guard let url = request.url?.absoluteString else {
             return "curl command could not be created"
         }
-        var components = ["curl -i '\(url)'"]
+        var components = ["curl -ik '\(url)'"]
         if let httpMethod = request.httpMethod, httpMethod != "GET" {
             components.append("-X \(httpMethod)")
         }
