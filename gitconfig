@@ -10,6 +10,7 @@
   trustctime = false
   indentHeuristic = true
   colorMoved = zebra
+  pager = /usr/local/bin/diff-highlight | less
 [push]
   default = current
 [credential]
