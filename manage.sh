@@ -9,6 +9,7 @@ files=(\
     gitattributes \
     gitconfig \
     gitignore \
+    githelpers \
     lldbhelpers \
     lldbinit \
     powerline-shell.json \

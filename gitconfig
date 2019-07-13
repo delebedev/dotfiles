@@ -16,8 +16,8 @@
 [credential]
   helper = osxkeychain
 [alias]
-  b           = branch
-  br          = branch
+  # all branches, sorted by last commit date
+  b           = "!. ~/.githelpers && pretty_git_branch_sorted"
   ci          = commit
   co          = checkout
   d           = diff
@@ -25,11 +25,18 @@
   dh1         = diff HEAD~1
   g           = !exec git
   git         = !exec git
-  l           = log -20 --topo-order --pretty='format:%Cblue%h%Creset %s%Cred%d%Creset %C(yellow)(%an)%Creset'
   prune       = fetch --prune
   st          = status
   stash-all   = stash save --include-untracked
   undo        = reset --soft HEAD^
+  # recent commits, only current branch
+  r           = !GIT_NO_PAGER=1 git l -30
+  # recent commits, all reachable refs
+  ra          = !git r --all
+  # all commits, only current branch
+  l           = "!. ~/.githelpers && pretty_git_log"
+  # all commits, all reachable refs
+  la          = !git l --all
 [color]
   diff = always
   status = always
@@ -52,9 +59,10 @@
 [mergetool "mergepbx"]
   cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 [filter "lfs"]
-  clean = git-lfs clean %f
-  smudge = git-lfs smudge %f
+  clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
   required = true
+	process = git-lfs filter-process
 [rerere]
   enabled = true
 [merge]
