@@ -23,3 +23,7 @@ zle -N up-line-or-beginning-search
 zle -N down-line-or-beginning-search
 bindkey "^[[A" up-line-or-beginning-search # Up
 bindkey "^[[B" down-line-or-beginning-search # Down
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/Users/denis.lebedev/.sdkman"
+[[ -s "/Users/denis.lebedev/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/denis.lebedev/.sdkman/bin/sdkman-init.sh"
