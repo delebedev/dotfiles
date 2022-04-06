@@ -1,6 +1,7 @@
 [user]
-  name = Denis Lebedev
-  email = d2.lebedev@gmail.com
+	name = Denis Lebedev
+	email = denis.lebedev@transferwise.com
+	signingkey = 9DE027A751DD40C9
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -71,3 +72,5 @@
   showUntrackedFiles = all
 [hub]
   protocol = https
+[commit]
+	gpgsign = true

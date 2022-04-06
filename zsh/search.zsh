@@ -1,0 +1,1 @@
+source "$HOME/.zsh/zsh-peco-history/zsh-peco-history.zsh"

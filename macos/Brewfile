@@ -1,4 +1,3 @@
-brew 'chisel'
 brew 'hub'
 brew 'vim'
 brew 'youtube-dl'

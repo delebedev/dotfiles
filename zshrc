@@ -1,5 +1,7 @@
 export DOTFILES="$(dirname "$(readlink "$HOME/.zshrc")")"
 
+PATH=~/.pyenv/versions/3.7.7/bin:~/.local/bin:$PATH
+
 # Find all config files, excluding completions
 configs=($DOTFILES/*/*.bash $DOTFILES/*/*.zsh)
 for file in ${configs:#*/completions.zsh}
@@ -7,22 +9,25 @@ do
   source "$file"
 done
 
-# Load autocomplete and other zsh stuff
-autoload -Uz compinit
-compinit -i
+if [ -z "$INTELLIJ_ENVIRONMENT_READER" ]; then
+  # Load autocomplete and other zsh stuff
+  autoload -Uz compinit
+  compinit -i
 
-for file in ${(M)configs:#*/completions.zsh}
-do
-  source "$file"
-done
+  for file in ${(M)configs:#*/completions.zsh}
+  do
+    source "$file"
+  done
 
-# Better history search
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
-bindkey "^[[A" up-line-or-beginning-search # Up
-bindkey "^[[B" down-line-or-beginning-search # Down
+  # Better history search
+  autoload -U up-line-or-beginning-search
+  autoload -U down-line-or-beginning-search
+  zle -N up-line-or-beginning-search
+  zle -N down-line-or-beginning-search
+  bindkey "^[[A" up-line-or-beginning-search # Up
+  bindkey "^[[B" down-line-or-beginning-search # Down
+fi
+
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/denis.lebedev/.sdkman"
