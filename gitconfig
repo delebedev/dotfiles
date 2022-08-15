@@ -65,7 +65,7 @@
   required = true
 	process = git-lfs filter-process
 [rerere]
-  enabled = true
+	enabled = true
 [merge]
   conflictstyle = diff3
 [status]
@@ -74,3 +74,11 @@
   protocol = https
 [commit]
 	gpgsign = true
+[branch "main"]
+	pushRemote = NOPE
+[branch "master"]
+	pushRemote = NOPE
+[advice]
+	skippedCherryPicks = false
+[pull]
+	rebase = true
