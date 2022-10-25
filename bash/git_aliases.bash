@@ -8,6 +8,3 @@ alias gca='git commit -a'
 alias gco='git checkout'
 alias gb='git b'
 alias gst='git status -sb'
-
-# TransferWise fork-PR workflows
-alias gpr='gp && git pull-request -o'

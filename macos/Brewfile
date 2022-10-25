@@ -4,3 +4,4 @@ brew 'youtube-dl'
 brew 'z'
 brew 'zsh'
 brew 'zsh-completions'
+brew 'svn' # required for fonts
