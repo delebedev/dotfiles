@@ -1,7 +1,5 @@
 export DOTFILES="$(dirname "$(readlink "$HOME/.zshrc")")"
 
-PATH=~/.pyenv/versions/3.7.7/bin:~/.local/bin:$PATH
-
 # Find all config files, excluding completions
 configs=($DOTFILES/*/*.bash $DOTFILES/*/*.zsh)
 for file in ${configs:#*/completions.zsh}

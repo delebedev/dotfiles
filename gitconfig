@@ -1,7 +1,7 @@
 [user]
 	name = Denis Lebedev
 	email = denis.lebedev@transferwise.com
-	signingkey = 9DE027A751DD40C9
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJB3eaMm3A1bI+gAqbFch00XuYN3PPVBfnfXblEPhh0e
 [core]
   excludesfile = ~/.gitignore
   attributesfile = ~/.gitattributes
@@ -11,7 +11,7 @@
   trustctime = false
   indentHeuristic = true
   colorMoved = zebra
-  pager = /usr/local/bin/diff-highlight | less
+  pager = diff-highlight | less
 [push]
   default = current
 [credential]
@@ -57,8 +57,6 @@
   #
   # Setting to git 2.0 default to suppress warning message
   default = simple
-[mergetool "mergepbx"]
-  cmd = mergepbx "$BASE" "$LOCAL" "$REMOTE" -o "$MERGED"
 [filter "lfs"]
   clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -82,3 +80,7 @@
 	skippedCherryPicks = false
 [pull]
 	rebase = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign

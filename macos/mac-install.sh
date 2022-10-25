@@ -14,6 +14,11 @@ if ! which brew &> /dev/null; then
 fi
 
 echo "Installing dependencies from Brewfile..."
-brew tap caskroom/fonts
+brew tap homebrew/cask-fonts
 brew bundle --file="macos/Brewfile"
 brew bundle --file="macos/Brewfile.cask"
+
+### defaults
+echo "Setting up defaults..."
+
+defaults write com.googlecode.iterm2 HotkeyTermAnimationDuration -float 0.00001

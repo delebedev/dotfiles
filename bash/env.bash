@@ -3,14 +3,14 @@ if [[ $OSTYPE == darwin* ]]; then
 fi
 
 # Set the path to include:
-#  - /usr/local/bin   for Homebrew
+#  - /opt/homebrew/bin   for Homebrew
 #  - /usr/local/sbin
 #  - /usr/bin         for system executables
 #  - /usr/sbin
 #  - /bin
 #  - /sbin
 #  - ~/dotfiles/bin
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/dotfiles/bin"
+export PATH="/opt/homebrew/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:$HOME/dotfiles/bin"
 
 # System had en_GB by default and caused obscure failures
 export LC_ALL=en_US.UTF-8
